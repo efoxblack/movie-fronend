@@ -1,0 +1,31 @@
+<div class="container">
+    <h1 class="text-center">Movie Catalog</h1>
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Recommended</th>
+                <th>Edit</th>
+                <th>View</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let movie of movies">
+                <td>{{ movie.id }}</td>
+                <td>{{ movie.title }}</td>
+                <td>{{ movie.description }}</td>
+                <td>{{ movie.recommended }}</td>
+                <td><button class="btn btn-outline-warning" (click)="editMovie(movie.id)">Edit</button></td>
+                <td><button class="btn btn-outline-info" (click)="viewMovie(movie.id)">View</button></td>
+                <td><button class="btn btn-danger" (click)="deleteMovie(movie.id)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="text-center">Add a movie to the catalog</h3>
+    <div class="row" id="add">
+        <button (click)="addMovie()" class="btn btn-success">Add</button>
+    </div>
+</div>

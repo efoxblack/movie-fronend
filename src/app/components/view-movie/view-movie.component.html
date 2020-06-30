@@ -1,0 +1,10 @@
+<h1 class="text-center">Here is the info for Movie {{ movie.title }}</h1>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Movie title: <br> {{ movie.title }}</h1>
+      <p class="lead">Movie description: <br> {{ movie.description }}</p>
+      <hr class="my-4">
+      <p>Is this movie recommended? <br> {{ movie.recommended }}</p>
+      <button type="button" class="btn btn-primary" (click)="goBackToList()" id="goBack">Go Back</button>
+    </div>
+</div>
